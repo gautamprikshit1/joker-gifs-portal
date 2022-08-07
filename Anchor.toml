@@ -2,12 +2,12 @@
 seeds = false
 skip-lint = false
 [programs.devnet]
-myepicproject = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
+myepicproject = "HnS1rEzAGyt8sFdcDJGViVxJWugkDVJDBkHJTEsFn8qF"
 
 [registry]
 url = "https://api.devnet.solana.com"
 
-[devnet]
+[provider]
 cluster = "devnet"
 wallet = "/home/priks/.config/solana/id.json"
 
