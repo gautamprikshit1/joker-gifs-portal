@@ -30,9 +30,10 @@ pub mod myepicproject {
         for item in base_account.gif_list.iter_mut() {
             if item.gif_link == item_url {
                 item.votes += 1;
+                break;
             }
         }
-        Ok(()) 
+        Ok(())
     }
 }
 

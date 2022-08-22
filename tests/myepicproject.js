@@ -1,7 +1,7 @@
 const anchor = require('@project-serum/anchor');
 const { SystemProgram } = anchor.web3;
 
-const main = async() => {
+const main = async () => {
   console.log("🚀 Starting test...")
 
   const provider = anchor.AnchorProvider.env();
@@ -23,13 +23,13 @@ const main = async() => {
   console.log('👀 GIF Count', account.totalGifs.toString())
 
   // You'll need to now pass a GIF link to the function! You'll also need to pass in the user submitting the GIF!
-  await program.rpc.addGif("insert_a_giphy_link_here", {
+  await program.rpc.addGif("https://media.giphy.com/media/DQeeGxJPv3VHE7zNYD/giphy.gif", {
     accounts: {
       baseAccount: baseAccount.publicKey,
       user: provider.wallet.publicKey,
     },
   });
-  
+
   // Call the account.
   account = await program.account.baseAccount.fetch(baseAccount.publicKey);
   console.log('👀 GIF Count', account.totalGifs.toString())
